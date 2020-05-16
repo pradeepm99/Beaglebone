@@ -1,0 +1,18 @@
+Dimmable LED Lights
+
+Materials Used:
+  - Beaglebone Black Microcontroller
+  - 2 LED lights
+  - 2 330 Ohm resistors
+  - Jumper cables
+  - USB 3.0 to microUSB cable
+  - Breadboard
+ 
+ Setup
+  - Connect the top LED to one of the resistors and to P9_14
+  - Connect the bottom LED to the other resistor and to P9_22
+  - Ground both LEDs
+  - Connect P9_1 to ground
+  
+ Code Description
+ Create the effect of a dimmable LED light by varying the duty cycle of the PWM. P9_14 and P9_22 are two PWM. Using a user input, each LED can be selected to a discrete brightness level which varies the duty cycle. The duty cycle is limited at 100, which is the brightest option.
