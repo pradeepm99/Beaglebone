@@ -1,0 +1,20 @@
+import Adafruit_BBIO.PWM as PWM
+LED_TOP = "P9_14"
+LED_BOT = "P9_22"
+PWM.start(LED_TOP,0,1000)
+PWM.start(LED_BOT,0,1000)
+for i in range(0,2):
+    bTop = input("Enter the brightness of the Top LED (0-7): ")
+    bBot = input("Enter the brightness of the Bottom LED (0-7): ")
+    Top_bits = 2**bTop
+    Bot_bits = 2**bBot
+    
+    if Top_bits > 100:
+        Top_bits = 100
+    if Bot_bits > 100:
+        Bot_bits = 100
+    PWM.set_duty_cycle(LED_TOP, Top_bits)
+    PWM.set_duty_cycle(LED_BOT, Bot_bits)
+PWM.stop(LED_BOT)
+PWM.stop(LED_TOP)
+PWM.cleanup()
