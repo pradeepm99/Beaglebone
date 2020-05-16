@@ -1,0 +1,20 @@
+Blinking LED Lights
+
+Materials Used:
+  - Beaglebone Black Microcontroller
+  - 2 LED lights
+  - 2 330 Ohm resistors
+  - Jumper cables
+  - USB 3.0 to microUSB cable
+  - Breadboard
+ 
+ Setup
+  - Connect the top LED to one of the resistors and to P8_11
+  - Connect the bottom LED to the other resistor and to P8_12
+  - Ground both LEDs
+  - Connect P8_1 to ground
+  
+ Code Description
+ Turn on each LED and use the sleep function to periodically turn them on and off
+ 
+ 
